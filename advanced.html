@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .input-height {
+            height: 20px;
+        }
+        
+        ul {
+            padding-top: 10px;
+        }
+        a {
+            color: black;    
+        }
+       
+        .img-par {
+            margin: 10px;
+            height: 30px;
+        }
+        
+        input {
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            margin: 10px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+        
+        .form-label-left {
+            text-align: left;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="nav" style="margin-bottom: 0;">
+        <li class="nav-item">
+            <img class="img-par" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+        </li>
+        <li class="nav-item ml-auto">
+            <a class="nav-link" href="index.html">Google Search</a>
+        </li>
+    </ul>
+    
+    <div class="header">
+        
+    </div>
+    <p style="color: #d93025; font-size: larger; margin-left: 40px; margin-top: 20px;">Advanced Search</p>
+    <hr class="divider">
+    
+    <div class="content">
+        <div class="container" style="margin-left: 40px;">
+            <p style="font-size: larger;">Find pages with...</p>
+            <form action="https://www.google.com/search" class="col-md-8">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label form-label-left" for="as_q">all these words:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="as_q" name="as_q" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label form-label-left" for="as_epq">this exact word or phrase:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="as_epq" name="as_epq">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label form-label-left" for="as_oq">any of these words:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="as_oq" name="as_oq">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label form-label-left" for="as_eq">none of these words:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="as_eq" name="as_eq">
+                    </div>
+                </div>
+                
+                <div class="form-group row">
+                    <div class="col-sm-9 offset-sm-3 d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Advanced search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

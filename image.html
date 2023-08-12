@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .input-height {
+            height: 50px
+        }
+        
+        ul {
+            padding-top: 10px;
+        }
+        a {
+            color: black;    
+        }
+        .inside-image {
+            position: absolute;
+            top: 65px;
+            margin-left: -55px;
+            color: #0b57d0;
+        }
+        
+        .img-par {
+            height: 92px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="nav justify-content-end" style="margin-bottom: 0;">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Google Search</a>
+        </li>
+
+    </ul>
+
+    <div class="content">
+        <form action="https://www.google.com/images" class="col-md-4 text-center">
+            <div class="mb-3">
+                <img class="img-par" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+                <span class="inside-image">Images</span>
+                <input type="text" class="form-control rounded-pill input-height" id="validationDefault01" name="q" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Image search</button>
+        </form>
+    </div>
+</body>
+</html>

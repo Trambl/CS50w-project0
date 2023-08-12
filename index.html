@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Search</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .input-height {
+            height: 50px
+        }
+        
+        ul {
+            padding-top: 10px;
+        }
+        a {
+            color: black;    
+        }
+        
+    </style>
+</head>
+<body>
+    <ul class="nav justify-content-end" style="margin-bottom: 0;">
+        <li class="nav-item">
+            <a class="nav-link" href="advanced.html">Advanced Search</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="image.html">Image Search</a>
+        </li>
+    </ul>
+    <div class="content">
+        <form id="searchForm" action="https://www.google.com/search" class="col-md-4 text-center">
+            <div class="mb-3">
+                <img height="92" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+                <input type="text" class="form-control rounded-pill input-height" id="validationDefault01" name="q" required>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary" style="margin-right: 5px" id="googleSearchBtn">Google search</button>
+                <button type="button" class="btn btn-primary" style="margin-left: 5px" id="feelingLuckyBtn">I'm feeling lucky</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('googleSearchBtn').addEventListener('click', function() {
+            var query = encodeURIComponent(document.getElementById('validationDefault01').value);
+            if (query === "") {
+                window.location.reload();
+            } else {
+                window.location.href = "https://www.google.com/search?q=" + query;
+            }
+        });
+
+        document.getElementById('feelingLuckyBtn').addEventListener('click', function() {
+            var query = encodeURIComponent(document.getElementById('validationDefault01').value);
+            window.location.href = "https://www.google.com/search?q=" + query + "&btnI=I";
+        });
+    </script>
+</body>
+</html>
